@@ -5,7 +5,7 @@ const Card = props => {
     return (
         <div className='card__content'>
             <div className='img__part'>
-                <img src='https://source.unsplash.com/random/150x150' />
+                <img src='https://source.unsplash.com/random/170x170' />
                 <p className='card__img'></p>
             </div>
             <article className='card__text'>
