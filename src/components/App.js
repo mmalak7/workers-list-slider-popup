@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
+import '../styles/app/App.scss';
 
 class App extends Component {
     render() {
-        <div>
-            <h1>React App</h1>
-        </div>
+        return (
+            <div>
+                <h1>React App</h1>
+            </div>
+        )
     }
 }
 
