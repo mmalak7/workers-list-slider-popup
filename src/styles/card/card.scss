@@ -1,0 +1,47 @@
+.card__content {
+    background: transparent;
+    text-align: center;
+
+    .img__part {
+        display: flex;
+        position: relative;
+        width: 150px;
+        height: 150px;
+        margin: 0 auto;
+
+        .card__img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background-color: rgba(#3ebbd9, 0.7);
+        }
+
+        img {
+            overflow: hidden;
+            border-radius: 50%;
+        }
+    }
+
+    .card__text {
+        text-align: center;
+
+        #card__name {
+            margin: 20px 10px 10px 10px;
+            color: #452e76;
+            font-size: 1.3em;
+        }
+
+        #card__role {
+            font-size: 1em;
+            color: #86d7e8;
+        }
+
+        #card__location {
+            font-size: 0.9em;
+            color: gray;
+        }
+    }
+}
