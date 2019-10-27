@@ -32,13 +32,13 @@
 }
 
 .main-container .members-container {
-  margin-left: 200px;
-  margin-right: 200px;
+  margin-left: 250px;
+  margin-right: 250px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[5];
       grid-template-columns: repeat(5, 1fr);
   grid-auto-rows: minmax(200px, auto);
-  grid-gap: 40px;
+  grid-gap: 30px;
 }
 /*# sourceMappingURL=Members.css.map */
