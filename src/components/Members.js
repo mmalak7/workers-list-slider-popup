@@ -78,15 +78,22 @@ class Members extends Component {
 
     state = {
         show: false,
+        selectedIndex: Number,
     };
-    showModal = () => this.setState({ show: true });
+    showModal = (idx) => {
+        this.setState(() => ({
+            show: true,
+            selectedIndex: idx,
+        }));
+    };
+
     hideModal = () => this.setState({ show: false });
 
     render() {
-        console.log(this.state);
+        console.log(this.state.selectedIndex)
 
         return (
-            <div>
+            < div >
                 <div className='main-container'>
                     <div className='info-text'>
                         <h1>Meet our team</h1>
@@ -94,17 +101,16 @@ class Members extends Component {
                     <div className='members-container'>
                         {membersList.map((value, index) => {
                             return (
-                                <div onClick={this.handleClick} className='card' key={index} id={index}>
+                                <div onClick={() => this.showModal(index)} className='card' key={index} id={index}>
                                     <Card index={index} name={value.name} role={value.role} location={value.location} />
                                 </div>
+
                             )
                         })}
                     </div>
                 </div>
-                <h1>React Modal</h1>
-                <SwiperModal handleClose={this.hideModal} show={this.state.show} membersList={membersList}>
+                <SwiperModal handleClose={this.hideModal} show={this.state.show} membersList={membersList} curr_idx={this.state.selectedIndex} >
                 </SwiperModal>
-                <button type="button" onClick={this.showModal}>open</button>
             </div >
         );
     }
